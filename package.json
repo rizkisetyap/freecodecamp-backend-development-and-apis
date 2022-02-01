@@ -2,6 +2,7 @@
   "name": "fcc-learn-npm-package-json",
   "author": "Rizki setyapambudi",
   "description": "learn backend development and apis from freecodecamp",
+  "version": "1.0.0",
   "keywords": [
     "freecodecamp",
     "Nodejs",
