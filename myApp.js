@@ -44,4 +44,4 @@ app.get('/name', (req, res) => {
   res.json({ name: first + ' ' + last });
 });
 
-app.module.exports = app;
+module.exports = app;
