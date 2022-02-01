@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config();
 const path = require('path');
 const app = express();
 
@@ -13,7 +14,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/json', (req, res) => {
-  res.json({ message: 'Hello json' });
+  res.json({ message: process.env.MESSAGE_STYLE });
 });
 
 module.exports = app;
