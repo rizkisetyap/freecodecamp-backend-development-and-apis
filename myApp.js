@@ -3,8 +3,14 @@ require('dotenv').config();
 const path = require('path');
 const app = express();
 
+// static files
 app.use('/public', express.static(path.join(__dirname, 'public')));
-// console.log('Hello World');
+
+//loger middleware
+app.use((req, res, next) => {
+  console.log(`${req.method}${req.path} - ${req.ip}`);
+  next();
+});
 
 app.get('/', (req, res) => {
   const file_path = path.join(__dirname, 'views/index.html');
